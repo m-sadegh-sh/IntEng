@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Category>
+<div class="box categories">
+    <h2>
+        گروه ها<span></span>
+    </h2>
+    <div class="box-content">
+        <ul>
+            @foreach (var category in Model)
+            {
+                <li>@Html.CategoryLink(category)
+                    <span class="gray">(@category.Products.Count())</span> </li>
+            }
+        </ul>
+    </div>
+</div>

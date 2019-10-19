@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "سبد خرید";
+}
+<h2>
+</h2>
+<div class="box search">
+    <h2>
+        @ViewBag.Title<span></span>
+    </h2>
+    <div class="box-content">
+        <p>
+            سبد خرید شما</p>
+        <table>
+            <thead>
+                <td>
+                    ردیف
+                </td>
+                <td>
+                    نام محصول
+                </td>
+                <td>
+                    تعداد
+                </td>
+                <td>
+                    قیمت
+                </td>
+            </thead>
+            <tbody>
+                @{
+                    var products = IntEngDataSource.GetFeaturesProducts().ToList();
+                }
+                @for (var i = 0; i < products.Count; i++)
+                {
+                    <tr>
+                        <td class="smoke">
+                            @(i + 1)
+                        </td>
+                        <td>
+                            @products[i].Name
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            @LocalizationManager.GetLocalizedPrice(products[i].UnitPrice)
+                        </td>
+                    </tr> 
+                }
+            </tbody>
+        </table>
+        <p>
+            برای انجام سفارش خود
+            @Html.RouteLink("اینجا", "OrderStart")
+            کلیک کنید.</p>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Product>
+<div class="slider box">
+    <div class="holder">
+        <ul>
+            @foreach (var product in Model)
+            {
+                <li><a href="@Url.ProductUrl(product)">
+                    <img src="@Url.ProductSliderImage(product)" alt="" /></a></li>               
+            }
+        </ul>
+    </div>
+    <div class="nav">
+        @{
+            var i = 0;
+            var c = Model.Count();
+        }
+        @while (++i <= c)
+        {
+            <a href="#" @(i == 1 ? " class='active'" : null)>@i</a>
+        }
+    </div>
+</div>

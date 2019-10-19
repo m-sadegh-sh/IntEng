@@ -1,0 +1,25 @@
+﻿@model FakeUserModel
+@if (!Request.IsAuthenticated)
+{
+    <div class="box search">
+        <h2>
+            ورود...<span></span>
+        </h2>
+        <div class="box-content">
+            @using (Html.BeginRouteForm("Login", FormMethod.Post))
+            {
+                <div>
+                    @Html.LabelFor(model => model.UserName)
+                    @Html.TextBoxFor(model => model.UserName, new { @class = "field" })
+                    @Html.ValidationMessageFor(model => model.UserName)
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Password)
+                    @Html.TextBoxFor(model => model.Password, new { @class = "field" })
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+                <input type="submit" class="search-submit" value="ورود" />
+            }
+        </div>
+    </div>
+}

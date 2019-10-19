@@ -1,0 +1,14 @@
+﻿@model Category
+@{
+    ViewBag.Title = Model.Name;
+}
+@if (Model.Products.Count() == 0)
+{
+    <p>
+        محصولی در این گروه یافت نشد.</p>
+}
+else
+{
+    @Html.Partial("_ProductsSlider", Model.Products)
+    @Html.Partial("_ProductsGrid", Model.Products)
+}

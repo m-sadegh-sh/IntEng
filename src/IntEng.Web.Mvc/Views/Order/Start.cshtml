@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "سفارش - قدم اول";
+}
+<h2>
+</h2>
+<div class="box search">
+    <h2>
+        @ViewBag.Title<span></span>
+    </h2>
+    <div class="box-content">
+        <p>
+            برای شروع سفارش فرم ذیل را تکمیل کنید.</p>
+        @using (Html.BeginRouteForm("OrderStart", FormMethod.Get))
+        {
+            <label>
+                نام</label>
+            <input id="name" class="field" name="name" type="text" />
+            
+            <input class="search-submit" type="submit" value="قدم بعدی" />
+        }
+    </div>
+</div>

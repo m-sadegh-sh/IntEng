@@ -1,0 +1,23 @@
+﻿@model Product
+@{
+    ViewBag.Title = string.Format("{0} - {1}", Model.Category.Name, Model.Name);
+}
+<div class="box search">
+    <h2>
+        @ViewBag.Title<span></span>
+    </h2>
+    <div class="box-content">
+        <p>
+            @Model.Description</p>
+        <p>
+            جزئیات محصول</p>
+        <ul>
+            <li><b>عنوان:</b> @Model.Name</li>
+            <li><b>قیمت:</b> @LocalizationManager.GetLocalizedPrice(Model.UnitPrice)</li>
+        </ul>
+        <p>
+            برای افزودن این محصول به سبد خرید
+            @Html.RouteLink("اینجا", "CartAdd", new { productId = Model.Id, productSlug = Model.Slug, returnUrl = Request.RawUrl })
+            کلیک کنید.</p>
+    </div>
+</div>

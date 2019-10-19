@@ -1,0 +1,11 @@
+﻿<ul>
+    <li>@Html.RouteLink("خانه", "Categories")</li>
+    @foreach (var cateogry in IntEngDataSource.GetNavCategories())
+    {
+        <li>
+            @Html.CategoryLink(cateogry)
+        </li>
+    }
+    <li>@Html.RouteLink("سفارش", "OrderStart")</li>
+    <li>@Html.RouteLink("تماس با ما", "Contact")</li>
+</ul>

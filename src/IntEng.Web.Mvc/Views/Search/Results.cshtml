@@ -1,0 +1,50 @@
+﻿@model SearchResultModel
+@{
+    if (Model.HasAny)
+    {
+        if (Model.Input.HasQuery)
+        {
+            ViewBag.Title = Model.Input.Query;
+        }
+        else
+        {
+            ViewBag.Title = "جستجو کنید...";
+        }
+    }
+    else
+    {
+        ViewBag.Title = string.Format("نتیجه ای برای \"{0}\" یافت نشد.", Model.Input.Query);
+    }
+}
+<h2>
+</h2>
+<div class="box search">
+    <h2>
+        @ViewBag.Title<span></span>
+    </h2>
+    <div class="box-content">
+        @using (Html.BeginRouteForm("Search", FormMethod.Get))
+        {
+            <label>
+                کلمه کلیدی</label>
+            <input id="q" name="q" type="text" class="field" value="@Model.Input.Query" />
+            <label>
+                گروه</label>
+            @Html.DropDownList("cid", IntEngDataSource.GetAllCategories().Select(c => new SelectListItem { Text = c.Name, Value = c.Id.ToString(), Selected = Model.Input.CategoryId == c.Id }), new { @class = "field" })
+            <div class="inline-field">
+                <label>
+                    قیمت</label>
+                <select id="uplb" name="uplb" class="field small-field">
+                    <option value="10000">@LocalizationManager.GetLocalizedPrice(10000M)</option>
+                </select>
+                <label>
+                    تا</label>
+                <select id="upub" name="upub" class="field small-field">
+                    <option value="50000">@LocalizationManager.GetLocalizedPrice(50000M)</option>
+                </select>
+            </div>
+            <input type="submit" class="search-submit" value="جستجو" />
+        }
+    </div>
+</div>
+@Html.Partial("_ProductsGrid", Model.Results)

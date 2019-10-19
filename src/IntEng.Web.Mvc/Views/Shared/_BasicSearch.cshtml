@@ -1,0 +1,17 @@
+﻿<div class="box search">
+    <h2>
+        جستجو کنید...<span></span>
+    </h2>
+    <div class="box-content">
+        @using (Html.BeginRouteForm("Search", FormMethod.Get))
+        {
+            <label>
+                کلمه کلیدی</label>
+            <input id="q" name="q" type="text" class="field" />
+            <input type="submit" class="search-submit" value="جستجو" />
+            <p>
+                @Html.RouteLink("جستجوی پیشرفته", "Search", null, new { @class = "bul" })
+            </p>
+        }
+    </div>
+</div>

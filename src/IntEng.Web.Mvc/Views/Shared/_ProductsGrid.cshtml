@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+<div class="products">
+    <ul>
+        @foreach (var product in Model)
+        {
+            <li><a href="@Url.ProductUrl(product)">
+                <img src="@Url.ProductLargeImage(product)" alt="" />
+            </a>
+                <div class="product-info">
+                    <h3>
+                        @product.Name @Html.RouteLink("(اضافه)", "CartAdd", new { productId = product.Id, productSlug = product.Slug, returnUrl = Request.RawUrl })</h3>
+                    <div class="product-desc">
+                        <h4>
+                            @product.Category.Name</h4>
+                        <p>
+                            @product.Description</p>
+                        <strong class="price">@LocalizationManager.GetLocalizedPrice(product.UnitPrice)</strong>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+    <div class="clear-fix">
+    </div>
+</div>

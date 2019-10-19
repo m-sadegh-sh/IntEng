@@ -1,0 +1,27 @@
+﻿@model FakeUserModel
+@{
+    ViewBag.Title = "ورود";
+}
+@using (Html.BeginRouteForm("Login", FormMethod.Post))
+{
+    if (ViewBag.HasError) {
+        @Html.ValidationSummary(null, new {@class = "error"})
+    }
+    @Html.Hidden("returnUrl",(object) ViewBag.ReturnUrl)
+    <div class="frm box-content search">
+        <div>
+            @Html.LabelFor(model => model.UserName)
+            @Html.TextBoxFor(model => model.UserName, new { @class = "field" })
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password, new { @class = "field" })
+        </div>
+        <p>
+            <input class="search-submit" type="submit" value="ورود" />
+        </p>
+    </div>
+}
+<div>
+    @Html.RouteLink("برگشت", "Categories")
+</div>

@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "خانه";
+}
+@Html.Partial("_ProductsSlider", IntEngDataSource.GetFeaturesProducts())
+@Html.Partial("_ProductsGrid", IntEngDataSource.GetAllProducts())

@@ -1,0 +1,40 @@
+﻿@using System.Globalization
+@model Product
+@using (Html.BeginRouteForm("New", FormMethod.Post))
+{
+    if (ViewBag.HasError)
+    {
+    @Html.ValidationSummary(null, new { @class = "error" })
+    }
+    <div class="frm box-content search">
+        <div>
+            @Html.LabelFor(model => model.UnitPrice)
+            @Html.TextBoxFor(model => model.UnitPrice, new { @class = "field" })
+            @Html.ValidationMessageFor(model => model.UnitPrice)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Slug)
+            @Html.TextBoxFor(model => model.Slug, new { @class = "field" })
+            @Html.ValidationMessageFor(model => model.Slug)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new { @class = "field" })
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Description)
+            @Html.TextAreaFor(model => model.Description, new { @class = "field huge" })
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.CategoryId)
+            @Html.DropDownListFor(model => model.CategoryId, IntEngDataSource.GetAllCategories().Select(c => new SelectListItem { Text = c.Name, Value = c.Id.ToString(CultureInfo.InvariantCulture), Selected = Model.CategoryId == c.Id }), new { @class = "field" })
+            @Html.ValidationMessageFor(model => model.CategoryId)
+        </div>
+        <div>
+            <input type="submit" class="search-submit" value="ذخیره تغییرات" />
+            <a href="~/">لغو</a>
+        </div>
+    </div>
+}

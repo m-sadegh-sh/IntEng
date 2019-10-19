@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Product>
+<div class="featured">
+    <div class="holder">
+        <ul>
+            @foreach (var product in Model)
+            {
+                <li><a href="@Url.ProductUrl(product)">
+                    <img src="@Url.ProductTinyImage(product)"/></a></li>
+            }
+        </ul>
+    </div>
+    <div class="nav">
+        <a href="#" class="prev">فبلی</a> <a href="#" class="next">بعدی</a>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{7BC98D65-BCFB-4C23-B14F-4587637BDF8A}"
+	ProjectSection(SolutionItems) = preProject
+		Database\IntEng.Database.mdf = Database\IntEng.Database.mdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntEng.Data", "IntEng.Data\IntEng.Data.csproj", "{9BB62E91-D776-49B6-8E59-EB1C4444A4EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntEng.Web.Mvc", "IntEng.Web.Mvc\IntEng.Web.Mvc.csproj", "{0972C4D6-4900-4F0C-91D1-CA47BE4B099D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB62E91-D776-49B6-8E59-EB1C4444A4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB62E91-D776-49B6-8E59-EB1C4444A4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB62E91-D776-49B6-8E59-EB1C4444A4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB62E91-D776-49B6-8E59-EB1C4444A4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0972C4D6-4900-4F0C-91D1-CA47BE4B099D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0972C4D6-4900-4F0C-91D1-CA47BE4B099D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0972C4D6-4900-4F0C-91D1-CA47BE4B099D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0972C4D6-4900-4F0C-91D1-CA47BE4B099D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

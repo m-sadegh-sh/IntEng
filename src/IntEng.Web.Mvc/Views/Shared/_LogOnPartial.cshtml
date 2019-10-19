@@ -1,0 +1,14 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <p>
+        سلام @User.Identity.Name
+        @Html.RouteLink("مدیریت محصولات", "List") &nbsp; @Html.RouteLink("خروج", "Logout", new { returnUrl = Request.RawUrl })
+    </p>
+}
+else
+{
+    <p>
+        سلام کاربر مهمان
+        @Html.RouteLink("ورود", "Login", new { returnUrl = Request.RawUrl })
+    </p>
+}

@@ -1,0 +1,685 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    font-family: 'B Homa';
+}
+body
+{
+    background: #fff url(/images/ui/body.gif) repeat-x 0 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #636363;
+    direction: rtl;
+}
+input, textarea, select
+{
+    font-size: 12px;
+}
+form
+{
+    margin: 10px 0;
+}
+.field
+{
+    background: #ebebeb;
+    border: solid 1px #dedede;
+    padding: 5px;
+}
+
+a img
+{
+    border: 0;
+}
+
+a
+{
+    color: #8b0000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+a:hover
+{
+    color: #666;
+    text-decoration: none;
+}
+
+.left, .alignleft
+{
+    float: right;
+    display: inline;
+}
+.right, .alignright
+{
+    float: left;
+    display: inline;
+}
+
+.clear-fix
+{
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+
+.al
+{
+    text-align: right;
+}
+.ar
+{
+    text-align: left;
+}
+.ac
+{
+    text-align: center;
+}
+p
+{
+    line-height: 30px;
+}
+h2
+{
+    font-size: 14px;
+    line-height: 16px;
+}
+ul
+{
+    list-style-position: inside;
+}
+h3
+{
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #000;
+}
+h4
+{
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+h1#logo
+{
+    font-size: 0;
+    line-height: 0;
+    width: 156px;
+    height: 64px;
+    float: right;
+}
+h1#logo a
+{
+    display: block;
+    height: 64px;
+    text-indent: -4000px;
+    background: url(/images/ui/logo.gif);
+}
+
+.shell
+{
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fff;
+}
+.logon
+{
+    display: block;
+    padding: 5px;
+    text-align: left;
+    background-color: #EBEBEB;
+    margin-bottom: 10px;
+}
+header
+{
+    height: 64px;
+    background: url(/images/ui/header.gif);
+    position: relative;
+}
+
+nav
+{
+    float: left;
+    white-space: nowrap;
+}
+nav ul
+{
+    list-style-type: none;
+    height: 64px;
+    font-weight: bold;
+    float: right;
+}
+nav ul li
+{
+    float: right;
+    display: inline;
+}
+nav ul li a
+{
+    float: right;
+    height: 64px;
+    line-height: 64px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+}
+nav ul li a.active, nav ul li a:hover
+{
+    background: #fff;
+    color: #8b0000;
+}
+
+#cart
+{
+    float: left;
+    top: 0;
+    right: 0;
+    height: 51px;
+    background: #8b0000;
+    color: #fff;
+    padding: 13px 10px 0 10px;
+    white-space: nowrap;
+    line-height: 20px;
+}
+a.cart-link
+{
+    color: #fff;
+    background: url(/images/ui/cart-link.gif) no-repeat right 0;
+    padding: 0 32px 0 0;
+    text-decoration: none;
+}
+a.cart-link:hover
+{
+    text-decoration: underline;
+}
+
+#sidebar
+{
+    float: right;
+    width: 226px;
+}
+#content
+{
+    float: left;
+    width: 724px;
+}
+
+#main
+{
+    padding: 10px 0;
+}
+
+.box
+{
+    padding: 1px;
+    border: solid 1px #dedede;
+    margin-bottom: 10px;
+}
+.box h2
+{
+    background: #7f7f7f;
+    color: #fff;
+    font-weight: normal;
+    padding: 0 5px;
+    position: relative;
+    height: 27px;
+    line-height: 27px;
+}
+.box h2 span
+{
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    background: url(/images/ui/h2-arrow.gif);
+    top: 27px;
+    left: 10px;
+    font-size: 0;
+    line-height: 0;
+}
+.box-content
+{
+    padding: 5px;
+}
+
+a.bul
+{
+    background: url(/images/ui/bul.gif) no-repeat right center;
+    padding-right: 10px;
+}
+
+.search
+{
+}
+.search label
+{
+    display: block;
+    padding-bottom: 3px;
+}
+
+.search .field
+{
+    display: block;
+    margin-bottom: 10px;
+}
+.search .inline-field label
+{
+    display: inline;
+    padding: 0;
+}
+.search .inline-field .field
+{
+    display: inline;
+    margin: 0;
+}
+.search input.field
+{
+    width: 201px;
+}
+.search select.field
+{
+    width: 212px;
+}
+.search select.small-field
+{
+    width: 87px;
+}
+
+.search-submit
+{
+    width: 70px;
+    background: #8b0000;
+    border: 0;
+    color: #fff;
+    height: 27px;
+    display: block;
+    line-height: 26px;
+    cursor: pointer;
+    margin: 10px 0 12px 0;
+}
+
+.categories
+{
+}
+.categories ul
+{
+    list-style-type: none;
+    font-size: 13px;
+}
+.categories ul li
+{
+    border-bottom: dashed 1px #ccc;
+    padding: 5px 0;
+}
+.categories ul li:last-child
+{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.categories ul li a
+{
+    color: #5f5f5f;
+    text-decoration: none;
+    background: url(/images/ui/category.gif) no-repeat right 4px;
+    padding-right: 17px;
+}
+.categories ul li a:hover
+{
+    color: #8b0000;
+}
+
+.slider
+{
+    height: 252px;
+    position: relative;
+    direction: ltr;
+    overflow: hidden;
+}
+.slider .holder
+{
+    width: 720px;
+    height: 252px;
+    position: relative;
+    overflow: hidden;
+}
+.slider .holder .jcarousel-clip
+{
+    width: 720px;
+    height: 252px;
+    position: relative;
+    overflow: hidden;
+}
+.slider .holder ul
+{
+    width: 720px;
+    height: 252px;
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+}
+.slider .holder ul li
+{
+    width: 720px;
+    height: 252px;
+    position: relative;
+    overflow: hidden;
+    float: right;
+}
+
+.slider .nav
+{
+    position: absolute;
+    top: 231px;
+    right: 644px;
+    z-index: 2;
+}
+.slider .nav a
+{
+    font-size: 0;
+    line-height: 0;
+    text-indent: -4000px;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #8b0000;
+    background: #8b0000;
+    float: right;
+    margin-left: 5px;
+}
+.slider .nav a:hover, .slider .nav a.active
+{
+    background: #fff;
+}
+
+.products
+{
+}
+.products ul
+{
+    list-style-type: none;
+}
+.products ul li
+{
+    position: relative;
+    padding: 1px;
+    border: solid 1px #dedede;
+    float: right;
+    width: 231px;
+    margin-left: 9px;
+    height: 383px;
+    overflow: hidden;
+    margin-bottom: 9px;
+}
+.products ul li:nth-child(3n)
+{
+    margin-left: 0;
+}
+
+.product-info
+{
+    position: absolute;
+    width: 153px;
+    top: 194px;
+    right: 0;
+}
+.product-info h3
+{
+    background: #8b0000;
+    color: #fff;
+    padding: 6px 10px;
+}
+.product-info h3 a
+{
+    color: #DBDBDB;
+    font-weight: normal;
+    font-style: italic;
+}
+.product-info h4
+{
+    font-weight: normal;
+}
+.product-info p
+{
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    padding: 7px 0 5px 0;
+}
+.product-info .product-desc
+{
+    padding: 10px;
+    background: url(/images/ui/info.png);
+    width: 133px;
+}
+
+.price
+{
+    display: block;
+    font-size: 21px;
+    color: #8b0000;
+    line-height: 23px;
+}
+
+.featured
+{
+    border: solid 1px #dedede;
+    position: relative;
+    height: 114px;
+    overflow: hidden;
+}
+.featured ul
+{
+    list-style-type: none;
+    height: 94px;
+    position: relative;
+    overflow: hidden;
+    width: 805px;
+}
+.featured ul li
+{
+    float: right;
+    width: 94px;
+    height: 94px;
+    border-left: dashed 1px #ccc;
+    padding: 0 10px;
+}
+.featured ul li:last-child
+{
+    border-left: 0;
+}
+
+.featured .holder
+{
+    width: 804px;
+    height: 94px;
+    position: relative;
+    direction: ltr;
+    overflow: hidden;
+    top: 10px;
+    right: 70px;
+}
+.featured .holder .jcarousel-clip
+{
+    width: 804px;
+    height: 94px;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured .nav
+{
+    font-size: 0;
+    line-height: 0;
+}
+.featured .nav a
+{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 30px;
+    height: 32px;
+    text-indent: -4000px;
+    z-index: 3;
+}
+.featured .nav a.next
+{
+    background: url(/images/ui/next.gif);
+    right: 910px;
+}
+.featured .nav a.prev
+{
+    background: url(/images/ui/prev.gif);
+    right: 20px;
+}
+
+.cols
+{
+    padding: 15px 0;
+}
+.col
+{
+    float: right;
+    display: inline;
+    width: 217px;
+    margin-left: 30px;
+}
+
+.inline
+{
+    display: inline;
+}
+.col-last
+{
+    margin-left: 0;
+}
+
+h3.ico
+{
+    background-repeat: no-repeat;
+    background-position: right 2px;
+    padding: 8px 30px 6px 0;
+}
+h3.plane
+{
+    background-image: url(/images/ui/plane.gif);
+}
+h3.tel
+{
+    background-image: url(/images/ui/tel.gif);
+}
+h3.gift
+{
+    background-image: url(/images/ui/gift.gif);
+}
+h3.cart
+{
+    background-image: url(/images/ui/cart.gif);
+}
+
+footer
+{
+    height: 51px;
+    background: #ebebeb;
+    white-space: nowrap;
+    line-height: 50px;
+    padding: 0 15px;
+    color: #7b7b7b;
+    margin-top: 10px;
+}
+footer a
+{
+    color: #7b7b7b;
+    text-decoration: none;
+}
+footer a:hover
+{
+    color: #000;
+}
+footer span
+{
+    padding: 0 2px;
+}
+footer ul
+{
+    float: right;
+}
+footer ul li
+{
+    display: inline;
+    margin: 0 5px;
+}
+.more
+{
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+    margin-left: 30px;
+}
+.cols ul
+{
+    display: block;
+    padding: 5px;
+    list-style-position: inside !important;
+}
+.gray
+{
+    color: #999;
+    font-size: small;
+    font-style: italic;
+}
+table thead
+{
+    background-color: gray;
+    color: white;
+}
+table th td, table tr td
+{
+    padding: 10px;
+}
+.smoke
+{
+    background-color: #E2E2E2;
+}
+.frm, .frm > div
+{
+    display: block;
+}
+.frm > div
+{
+    margin: 10px;
+}
+.frm > div > label
+{
+    width: 150px;
+    margin-left: 5px;
+}
+
+.huge
+{
+    height: 150px;
+    width: 400px;
+}
+
+.error
+{
+    display: block;
+    margin: 10px 10px 20px 10px;
+    padding: 10px;
+    color: #FF0000;
+    background-color: #FFD9D9;
+    border: 1px solid #FF0000;
+}
+.input-validation-error{ display: inline !important;}
+span.field-validation-error
+{
+    display: inline-block;
+    color: #FF0000;
+    margin-right: 5px;
+}

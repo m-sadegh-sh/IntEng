@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - فروشگاه من</title>
+    <link href="@Url.Content("~/Styles/Base.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.min.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/Scripts/AjaxLogin.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/Scripts/jquery-func.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.jcarousel.pack.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="shell">
+        <div class="logon">
+            @Html.Partial("_LogOnPartial")
+        </div>
+        <header>
+            <h1 id="logo">
+                @Html.RouteLink("فروشگاه من", "Categories")
+            </h1>
+            @Html.Partial("_Cart")
+            <nav>
+                @Html.Partial("_Nav")
+            </nav>
+        </header>
+        <div id="main">
+            <div class="clear-fix">
+            </div>
+            <div id="content">
+                @RenderBody()
+            </div>
+            <div id="sidebar">
+                @if (ViewContext.RequestContext.RouteData.Values["Action"].ToString() != "Login")
+                {
+                    @Html.Partial("_Login", new FakeUserModel())
+                }
+                @Html.Partial("_BasicSearch")
+                @Html.Partial("_Products", IntEngDataSource.GetTopProducts())
+                @Html.Partial("_Categories", IntEngDataSource.GetAllCategories())
+            </div>
+            <div class="clear-fix">
+            </div>
+        </div>
+        @Html.Partial("_FeaturedProducts", IntEngDataSource.GetTopProducts())
+        <footer>
+            @Html.Partial("_Nav")
+            <p class="right">
+                &copy; 2010 فروشگاه من.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
